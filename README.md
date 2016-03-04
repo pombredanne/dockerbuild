@@ -16,5 +16,5 @@ import dockerbuild
 
 builder = dockerbuild.Builder()
 dockerfile_path = './Dockerfile'
-builder.build('./Dockerfile')
+image_id = builder.build(context_dir='.', dockerfile='Dockerfile', tag='myimage')
 ```
