@@ -1,0 +1,4 @@
+FROM busybox
+LABEL datatype="test" value1="foo" value2="bar"
+LABEL multiline.support="tr\
+ue"

@@ -1,0 +1,2 @@
+FROM busybox
+COPY add_array /dockerfiles/

@@ -1,0 +1,3 @@
+FROM busybox
+ENV FOO=bar BAZ=baz
+ENV SOLO duo

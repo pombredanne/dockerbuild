@@ -1,0 +1,2 @@
+FROM busybox
+COPY cmd* /dockerfiles_cmd/
