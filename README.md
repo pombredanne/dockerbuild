@@ -15,6 +15,5 @@ python setup.py install
 import dockerbuild
 
 builder = dockerbuild.Builder()
-dockerfile_path = './Dockerfile'
 image_id = builder.build(context_dir='.', dockerfile='Dockerfile', tag='myimage')
 ```

@@ -1,4 +1,4 @@
-import glob
+# import glob
 import json
 import os.path
 import shlex
@@ -32,7 +32,6 @@ class Instruction(object):
 class Var(object):
     def __init__(self, s):
         self.neg_default = False
-        print(s)
         var = s.strip('${}')
         default = ''
         if ':' in var:
@@ -221,9 +220,10 @@ class CopyInstr(TemplatedInstruction):
         )
         dest_path = paths.pop()
         arc_name = None
-        expanded_paths = []
-        for path in paths:
-            expanded_paths.extend(glob.glob(path))
+        # FIXME: glob support
+        expanded_paths = paths
+        # for path in paths:
+        #     expanded_paths.extend(glob.glob(path))
 
         if dest_path[-1] != '/' and len(expanded_paths) == 1:
             expanded_paths[0] = (
